@@ -29,6 +29,18 @@ class ProductController {
  + deleteProduct(id : Long) : void
  + search(name : String) : List<Product>
 }
+class DigitalProduct {
+  - downloadUrl : String
+  - fileSizeMB : double
+  + getDownloadUrl() : String
+}
+
+class PhysicalProduct {
+  - weightKg : double
+  - dimensions : String
+  + getWeightKg() : double
+}
+
 
 ' ..> is a dependency: DASHED line, open arrow
 ProductController ..> ProductService
